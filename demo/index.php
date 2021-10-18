@@ -41,7 +41,7 @@
 
 <?php
 
-if (isset($_POST['captcha_answer']) && isset($_POST['captcha_uid']) && !empty($_POST['captcha_answer']) && !empty($_POST['captcha_uid'])) {
+if ((isset($_POST['captcha_answer']) || $_POST['captcha_answer'] === 0) && isset($_POST['captcha_uid']) && !empty($_POST['captcha_uid'])) {
     require 'src/captcha.php';
 
     $result = captcha_validate($_POST['captcha_uid'], $_POST['captcha_answer']);
