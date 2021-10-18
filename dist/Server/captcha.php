@@ -196,7 +196,7 @@ if (isset($_REQUEST['o']) && !empty($_REQUEST['o'])) {
             }
             break;
         case 'validate':
-            if (isset($_REQUEST['i']) && !empty($_REQUEST['i']) && isset($_REQUEST['a']) && !empty($_REQUEST['a'])) {
+            if (isset($_REQUEST['i']) && !empty($_REQUEST['i']) && (isset($_REQUEST['a']) || $_REQUEST['a'] === 0)) {
                 $c = connectDB();
                 autoDelete($c);
                 if (verifyID($c, $_REQUEST['i'])) {
