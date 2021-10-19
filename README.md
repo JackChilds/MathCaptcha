@@ -17,6 +17,8 @@ To run the demo on your local machine, do the following:
 ## How To Use
 Place the captcha.js and the captcha.php file on your website. Then, create an SQL table in your database with 3 columns: uid (string), answer (int), created (int).
 
+**Important**: ensure that you set the default value of the answer column to NULL type or something similar but not 0, to prevent an attack where the attacker can generate a uid and then successfully validate the new uid with an answer of 0 (the default value for the column)
+
 ### Places to edit
 **captcha.js**
 - Edit the URL variable on line 4 to provide a path to the captcha.php file
