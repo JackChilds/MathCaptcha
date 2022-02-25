@@ -2,8 +2,6 @@
 
 A simple maths based captcha tool that is lightweight and written in vanilla JS and plain PHP, no plugins needed :)
 
-Online demo: https://morcreate.net/github/MathCaptcha/
-
 ## Requirements
 This captcha tool has been written in vanilla JS and PHP with no extra packages/plugins needed so you are able to get setup quickly and integrate it easily into your project.
 
